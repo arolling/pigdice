@@ -15,6 +15,12 @@ describe("Player",function() {
     expect(testPlayer.bank).to.equal(6);
     expect(testPlayer.turnTotal).to.equal(0);
   });
+
+  it("will win the game if the bank is equal to or greater than 100", function() {
+    var testPlayer = new Player ("Dave");
+    scoreKeeping(101, testPlayer);
+    expect(testPlayer.bankTurn()).to.equal(true);
+  });
 });
 
 describe("roll",function() {

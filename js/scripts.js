@@ -7,6 +7,9 @@ function Player(firstName) {
 Player.prototype.bankTurn = function() {
   this.bank = this.turnTotal;
   this.turnTotal = 0;
+  if(this.bank >= 100) {
+    return true;
+  }
 }
 
  var roll = function() {
