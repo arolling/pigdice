@@ -6,3 +6,11 @@ describe("Player",function() {
     expect(testPlayer.playerName).to.equal("Dave");
   });
 });
+
+describe("roll",function() {
+  it("will randomly roll a standard die", function() {
+    var rolldie = roll();
+    console.log(rolldie);
+    expect(rolldie).to.be.within(1,6);
+  })
+})
