@@ -23,8 +23,27 @@
               <input type="text" id="player1name">
             </div>
             <button type="submit" class="btn btn-default" id="submitplayer1">Start</button>
-          </form>
+          </form> <!-- End input form -->
+          <div class="row">
+            <div class="col-sm-6 displaybox">
+              <h1>Current Roll</h1>
+              <span id='currentdiceroll1'></span>
+            </div>
+            <div class="col-sm-6 displaybox">
+              <h1>Turn Total</h1>
+              <span id='runningturntotal1'></span>
+            </div>
+          </div><!-- End turn display -->
 
+          <div id='player1buttons'>
+            <button type="button" class="btn btn-info btn-lg" id="player1hold">Hold</button>
+            <button type="button" class="btn btn-danger btn-lg" id="player1roll">Roll Die</button>
+          </div><!--End turn choices -->
+          <div class="row displaybox">
+            <h2>Bank:</h2>
+            <span id="bank2"></span>
+
+          </div><!-- End bank display -->
         </div> <!-- End first column -->
 
         <div class="col-sm-6 displaybox" id="player2column">
@@ -35,8 +54,26 @@
               <input type="text" id="player2name">
             </div>
             <button type="submit" class="btn btn-default" id="submitplayer2">Start</button>
-          </form>
+          </form> <!-- End input form -->
+          <div class="row">
+            <div class="col-sm-6">
+              <h1>Current Roll</h1>
+              <span id='currentdiceroll2'></span>
+            </div>
+            <div class="col-sm-6">
+              <h1>Turn Total</h1>
+              <span id='runningturntotal2'></span>
+            </div>
+          </div>
+          <div id='player2buttons'>
+            <button type="button" class="btn btn-info btn-lg" id="player2hold">Hold</button>
+            <button type="button" class="btn btn-danger btn-lg" id="player2roll">Roll Die</button>
+          </div><!--End turn choices -->
+          <div class="row displaybox">
+            <h2>Bank:</h2>
+            <span id="bank2"></span>
 
+          </div><!-- End bank display -->
 
         </div> <!-- End second column -->
       </div> <!-- End first row -->

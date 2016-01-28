@@ -45,5 +45,29 @@ $(document).ready(function() {
     console.log(player1,player2);
   });
 
+  $('button#player1roll').click(function(){
+    var dieRoll = roll();
+    $('#currentdiceroll1').text(dieRoll);
+    var pig = scoreKeeping(dieRoll, player1);
+    if (pig === false) {
+      alert("end of turn");
+      $('#runningturntotal1').text(player1.turnTotal);
+    } else {
+      $('#runningturntotal1').text(player1.turnTotal);
+    }
+  });
+
+  $('button#player2roll').click(function(){
+    var dieRoll = roll();
+    $('#currentdiceroll2').text(dieRoll);
+    var pig = scoreKeeping(dieRoll, player2);
+    if (pig === false) {
+      alert("end of turn");
+      $('#runningturntotal2').text(player2.turnTotal);
+    } else {
+      $('#runningturntotal2').text(player2.turnTotal);
+    }
+  });
+
 
 });
