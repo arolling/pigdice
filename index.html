@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Play Pig Dice!</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 displaybox" id="player1column">
+          <h2 id="displayname1">Player1</h2>
+          <form class="form-inline" id="name1input">
+            <div class="form-group">
+              <label for="player1name">Name:</label>
+              <input type="text" id="player1name">
+            </div>
+            <button type="submit" class="btn btn-default" id="submitplayer1">Start</button>
+          </form>
+
+        </div> <!-- End first column -->
+
+        <div class="col-sm-6 displaybox" id="player2column">
+          <h2 id="displayname2">Player2</h2>
+          <form class="form-inline" id="name2input">
+            <div class="form-group">
+              <label for="player2name">Name:</label>
+              <input type="text" id="player2name">
+            </div>
+            <button type="submit" class="btn btn-default" id="submitplayer2">Start</button>
+          </form>
+
+
+        </div> <!-- End second column -->
+      </div> <!-- End first row -->
+    </div> <!-- End MAIN BODY CONTAINER -->
+  </body>
+</html>

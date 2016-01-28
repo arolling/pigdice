@@ -24,3 +24,26 @@ var scoreKeeping = function(dieRoll, currentPlayer) {
       currentPlayer.turnTotal += dieRoll;
     }
 }
+//  END BUSINESS LOGIC
+
+$(document).ready(function() {
+  var player1;
+  var player2;
+
+  $('form#name1input').submit(function(event) {
+    event.preventDefault();
+    player1 = new Player($('input#player1name').val());
+    $('form#name1input').hide();
+    $('#displayname1').html(player1.playerName);
+  });
+
+  $('form#name2input').submit(function(event) {
+    event.preventDefault();
+    player2 = new Player($('input#player2name').val());
+    $('form#name2input').hide();
+    $('#displayname2').html(player2.playerName);
+    console.log(player1,player2);
+  });
+
+
+});
