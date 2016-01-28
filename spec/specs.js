@@ -5,6 +5,16 @@ describe("Player",function() {
     expect(testPlayer.turnTotal).to.equal(0);
     expect(testPlayer.playerName).to.equal("Dave");
   });
+
+  it("will add turn total to bank", function() {
+    var testPlayer = new Player ("Dave");
+    console.log(testPlayer);
+    scoreKeeping(3, testPlayer);
+    scoreKeeping(3, testPlayer);
+    testPlayer.bankTurn();
+    expect(testPlayer.bank).to.equal(6);
+    expect(testPlayer.turnTotal).to.equal(0);
+  });
 });
 
 describe("roll",function() {
@@ -12,5 +22,17 @@ describe("roll",function() {
     var rolldie = roll();
     console.log(rolldie);
     expect(rolldie).to.be.within(1,6);
-  })
-})
+  });
+});
+
+describe("scoreKeeping",function() {
+  it ("will return false if die is rolled 1", function() {
+    var testPlayer = new Player ("Dave");
+    expect(scoreKeeping(1, testPlayer)).to.equal(false);
+  });
+  it ("will add the amount of die roll to the turn total", function() {
+    var testPlayer = new Player ("Dave");
+    scoreKeeping(3, testPlayer);
+    expect(testPlayer.turnTotal).to.equal(3);
+  });
+});
