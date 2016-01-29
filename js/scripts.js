@@ -78,7 +78,7 @@ $(document).ready(function() {
     var winning = player1.bankTurn();
     $('#bank1').text(player1.bank);
     if(winning === true) {
-      alert('You Won');
+      alert(player1.firstName + ' Won');
     }
     $('#player1buttons').hide();
     $('#player2buttons').show();
@@ -89,7 +89,7 @@ $(document).ready(function() {
     var winning = player2.bankTurn();
     $('#bank2').text(player2.bank);
     if(winning === true) {
-      alert('You Won');
+      alert(player1.firstName + ' Won');
     }
     $('#player2buttons').hide();
     $('#player1buttons').show();

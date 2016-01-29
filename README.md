@@ -11,7 +11,7 @@ This game of pig dice can be played with alternating turns by two players, each 
 
 ## Known Bugs
 
-Minimalist user interaction experience, no error testing.
+Minimalist user interaction experience, no error testing. Unpredictable behavior when only one user enters their name.
 
 
 ## Technologies Used
