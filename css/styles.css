@@ -1,5 +1,12 @@
-.displaybox {
+/*.displaybox {
   border: 1px;
   border-style: solid;
   border-color: red;
+}*/
+#restart {
+  color: black;
+}
+
+#player2buttons {
+  display:none;
 }

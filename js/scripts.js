@@ -5,7 +5,7 @@ function Player(firstName) {
 }
 
 Player.prototype.bankTurn = function() {
-  this.bank = this.turnTotal;
+  this.bank += this.turnTotal;
   this.turnTotal = 0;
   if(this.bank >= 100) {
     return true;
@@ -52,6 +52,8 @@ $(document).ready(function() {
     if (pig === false) {
       alert("end of turn");
       $('#runningturntotal1').text(player1.turnTotal);
+      $('#player1buttons').hide();
+      $('#player2buttons').show();
     } else {
       $('#runningturntotal1').text(player1.turnTotal);
     }
@@ -64,10 +66,32 @@ $(document).ready(function() {
     if (pig === false) {
       alert("end of turn");
       $('#runningturntotal2').text(player2.turnTotal);
+      $('#player2buttons').hide();
+      $('#player1buttons').show();
     } else {
       $('#runningturntotal2').text(player2.turnTotal);
     }
   });
 
+  $('button#player1hold').click(function() {
+    console.log(player1);
+    var winning = player1.bankTurn();
+    $('#bank1').text(player1.bank);
+    if(winning === true) {
+      alert('You Won');
+    }
+    $('#player1buttons').hide();
+    $('#player2buttons').show();
+  });
 
+  $('button#player2hold').click(function() {
+    console.log(player2);
+    var winning = player2.bankTurn();
+    $('#bank2').text(player2.bank);
+    if(winning === true) {
+      alert('You Won');
+    }
+    $('#player2buttons').hide();
+    $('#player1buttons').show();
+  });
 });
